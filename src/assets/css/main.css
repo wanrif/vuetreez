@@ -1,0 +1,11 @@
+/* Fonts */
+@import url(https://fonts.bunny.net/css?family=figtree:400,500,600,700);
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-shark-100 font-sans text-base text-shark-950 antialiased transition-colors duration-200 ease-in-out dark:bg-shark-950 dark:text-shark-50;
+}

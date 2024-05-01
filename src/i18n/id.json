@@ -1,0 +1,18 @@
+{
+  "app_name": "VueTreez",
+
+  "nav_home": "Beranda",
+  "nav_about": "Tentang",
+  "nav_notfound": "Not Found",
+
+  "hello_world": "Halo Dunia!",
+
+  "landing_welcome": "Selamat datang di {app_name}",
+  "landing_description": "Ini adalah Boilerplate sederhana untuk Vue 3",
+
+  "not_found": "Halaman tidak ditemukan",
+  "not_found_title": "404 error",
+  "not_found_message": " Maaf, halaman yang Anda cari tidak ada, berikut beberapa tautan yang bermanfaat:",
+  "not_found_home": "Bawa saya pulang",
+  "not_found_back": "Kembali"
+}

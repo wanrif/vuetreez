@@ -1,0 +1,18 @@
+{
+  "app_name": "VueTreez",
+
+  "nav_home": "Home",
+  "nav_about": "About",
+  "nav_notfound": "Not Found",
+
+  "hello_world": "Hello World!",
+
+  "landing_welcome": "Welcome to {app_name}",
+  "landing_description": "This is a simple Boilerplate for Vue 3",
+
+  "not_found": "Page not found",
+  "not_found_title": "404 error",
+  "not_found_message": "Sorry, the page you are looking for doesn't exist.Here are some helpful links:",
+  "not_found_home": "Take me home",
+  "not_found_back": "Go back"
+}
