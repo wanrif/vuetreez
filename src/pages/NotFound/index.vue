@@ -23,7 +23,7 @@
 </script>
 
 <template>
-  <main id="__notFound" class="mx-6 bg-white dark:bg-shark-950">
+  <main id="__notFound" class="mx-6">
     <div :style="heightClass" :class="`container mx-auto px-6 py-12 lg:flex lg:items-center lg:gap-12`">
       <div class="wf-ull lg:w-1/2">
         <p class="text-sm font-medium text-shark-500 dark:text-shark-400">{{ $t('not_found_title') }}</p>
@@ -36,7 +36,7 @@
           <button
             @click="$router.back()"
             type="button"
-            class="flex w-1/2 items-center justify-center gap-x-2 rounded-lg border bg-white px-5 py-2 text-sm text-shark-700 transition duration-200 ease-in hover:bg-shark-100 focus:outline-none focus:ring-2 focus:ring-shark-500 focus:ring-offset-2 focus:ring-offset-shark-200 dark:border-shark-700 dark:bg-shark-950 dark:text-shark-200 dark:hover:bg-shark-800 dark:focus:ring-shark-600 dark:focus:ring-offset-shark-950 sm:w-auto"
+            class="flex w-1/2 items-center justify-center gap-x-2 rounded-lg border bg-shark-50 px-5 py-2 text-sm text-shark-700 transition duration-200 ease-in hover:bg-shark-100 focus:outline-none focus:ring-2 focus:ring-shark-500 focus:ring-offset-2 focus:ring-offset-shark-200 dark:border-shark-700 dark:bg-shark-950 dark:text-shark-200 dark:hover:bg-shark-800 dark:focus:ring-shark-600 dark:focus:ring-offset-shark-950 sm:w-auto"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
