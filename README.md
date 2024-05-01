@@ -29,13 +29,13 @@ To get started with the project, follow these steps:
 Clone the repository:
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/wanrif/vuetreez.git
 ```
 
 Navigate to the project directory:
 
 ```bash
-  cd my-project
+  cd vuetreez
 ```
 
 Install dependencies:
