@@ -9,6 +9,12 @@
 
   "landing_welcome": "Selamat datang di {app_name}",
   "landing_description": "Ini adalah Boilerplate sederhana untuk Vue 3",
+  "landing_techstack_vue_desc": "Vue 3 adalah kerangka kerja JavaScript progresif untuk membangun antarmuka pengguna.",
+  "landing_techstack_vite_desc": "Vite adalah alat bantu pembuatan yang bertujuan untuk memberikan pengalaman pengembangan yang lebih cepat dan lebih ramping untuk proyek web modern.",
+  "landing_techstack_tailwind_desc": "Tailwind CSS adalah kerangka kerja CSS yang mengutamakan utilitas.",
+  "landing_techstack_typescript_desc": "TypeScript adalah superset JavaScript yang diketik yang dikompilasi ke JavaScript biasa.",
+  "landing_techstack_pinia_desc": "Pinia adalah Vue Store yang dirancang agar mudah digunakan dan dipahami.",
+  "landing_techstack_vue_i18n_desc": "Vue I18n adalah plugin internasionalisasi untuk Vue.js.",
 
   "not_found": "Halaman tidak ditemukan",
   "not_found_title": "404 error",

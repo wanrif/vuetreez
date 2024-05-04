@@ -1,19 +1,19 @@
 <script setup lang="ts">
-  import { onMounted, ref } from 'vue';
+  import { onMounted, computed, ref } from 'vue';
   import { useI18n } from 'vue-i18n';
-  import _ from 'lodash';
   import type { OnClickOutsideHandler } from '@vueuse/core';
   import { vOnClickOutside } from '@vueuse/components';
   import { useI18nStore } from '@stores/i18n.store';
 
-  import id from '@assets/images/id.png';
-  import en from '@assets/images/en.png';
+  import idFlag from '@assets/images/id.png';
+  import enFlag from '@assets/images/en.png';
 
   const dropdown = ref<boolean>(false);
   const { locale, availableLocales } = useI18n();
-  const flag = ref<string>('');
   const i18nStore = useI18nStore();
   i18nStore.$persist();
+
+  const flag = computed(() => (locale.value === 'id' ? idFlag : enFlag));
 
   const dropdownHandler: OnClickOutsideHandler = () => {
     dropdown.value = false;
@@ -23,15 +23,14 @@
     i18nStore.setLocale(newLocale);
     locale.value = newLocale;
     dropdown.value = false;
-    flag.value = newLocale === 'id' ? id : en;
   };
 
   onMounted(() => {
-    if (_.isEmpty(i18nStore.locale)) {
+    if (!i18nStore.locale) {
       i18nStore.setLocale(locale.value);
+    } else {
+      locale.value = i18nStore.locale;
     }
-    locale.value = i18nStore.locale;
-    flag.value = locale.value === 'id' ? id : en;
   });
 </script>
 
@@ -41,7 +40,7 @@
       <img :src="flag" alt="flag" class="h-3 w-5" />
       {{ locale }}
     </button>
-    <Transition name="bounce">
+    <transition name="bounce">
       <div
         v-show="dropdown"
         v-on-click-outside.bubble="dropdownHandler"
@@ -49,17 +48,15 @@
       >
         <div
           v-for="locale in availableLocales"
-          :key="`locale-${locale}`"
+          :key="locale"
           @click.prevent="changeLanguage(locale)"
           class="flex cursor-pointer items-center justify-start gap-2 px-1.5 py-1 hover:bg-emerald-400 dark:hover:bg-emerald-600"
         >
-          <img :src="locale === 'id' ? id : en" alt="flag" class="h-3 w-5" />
-          <span class="uppercase">
-            {{ locale }}
-          </span>
+          <img :src="locale === 'id' ? idFlag : enFlag" alt="flag" class="h-3 w-5" />
+          <span class="uppercase">{{ locale }}</span>
         </div>
       </div>
-    </Transition>
+    </transition>
   </div>
 </template>
 

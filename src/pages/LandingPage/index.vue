@@ -27,45 +27,44 @@
     minHeight: `calc(100dvh - ${props.headerHeight}px)`,
   }));
 
-  const techStacks = [
+  const techStacks = computed(() => [
     {
       title: 'Vue 3',
-      description: 'Vue 3 is a progressive JavaScript framework for building user interfaces.',
+      description: t('landing_techstack_vue_desc'),
       img: vueImg,
       website: 'https://vuejs.org/',
     },
     {
       title: 'Vite',
-      description:
-        'Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects.',
+      description: t('landing_techstack_vite_desc'),
       img: viteImg,
       website: 'https://vitejs.dev/',
     },
     {
       title: 'Tailwind CSS',
-      description: 'Tailwind CSS is a utility-first CSS framework.',
+      description: t('landing_techstack_tailwind_desc'),
       img: tailwindImg,
       website: 'https://tailwindcss.com/',
     },
     {
       title: 'TypeScript',
-      description: 'TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.',
+      description: t('landing_techstack_typescript_desc'),
       img: tsImg,
       website: 'https://www.typescriptlang.org/',
     },
     {
       title: 'Pinia',
-      description: 'Pinia is a Vue Store that is designed to be easy to use and understand.',
+      description: t('landing_techstack_pinia_desc'),
       img: piniaImg,
       website: 'https://pinia.vuejs.org/',
     },
     {
       title: 'Vue I18n',
-      description: 'Vue I18n is internationalization plugin for Vue.js',
+      description: t('landing_techstack_vue_i18n_desc'),
       img: i18nImg,
       website: 'https://vue-i18n.intlify.dev/',
     },
-  ];
+  ]);
 </script>
 
 <template>

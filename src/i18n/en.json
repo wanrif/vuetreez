@@ -9,6 +9,12 @@
 
   "landing_welcome": "Welcome to {app_name}",
   "landing_description": "This is a simple Boilerplate for Vue 3",
+  "landing_techstack_vue_desc": "Vue 3 is a progressive JavaScript framework for building user interfaces.",
+  "landing_techstack_vite_desc": "Vite is a build tool that aims to provide a faster and leaner development experience for modern web projects.",
+  "landing_techstack_tailwind_desc": "Tailwind CSS is a utility-first CSS framework.",
+  "landing_techstack_typescript_desc": "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.",
+  "landing_techstack_pinia_desc": "Pinia is a Vue Store that is designed to be easy to use and understand.",
+  "landing_techstack_vue_i18n_desc": "Vue I18n is internationalization plugin for Vue.js.",
 
   "not_found": "Page not found",
   "not_found_title": "404 error",
