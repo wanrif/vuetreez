@@ -8,6 +8,12 @@ export default defineConfig({
   server: {
     port: 5173,
   },
+  css: {
+    modules: {
+      hashPrefix: 'prefix',
+      generateScopedName: '_[folder]_[local]_[sha256:hash:base64:5]_[hash:base64:2]',
+    },
+  },
   resolve: {
     alias: {
       '@layouts': fileURLToPath(new URL('./src/layouts', import.meta.url)),
