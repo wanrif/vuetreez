@@ -7,7 +7,7 @@ This is a boilerplate project for creating Vue.js applications with TypeScript. 
 - Vue.js and TypeScript integration
 - Scalable and maintainable architecture
 - Tailwind CSS for styling
-- Modern tooling with Vite and ESLint
+- Modern tooling with Vite and Oxlint
 
 ## Technologies Used
 

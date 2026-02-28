@@ -44,7 +44,7 @@
       <div
         v-show="dropdown"
         v-on-click-outside.bubble="dropdownHandler"
-        class="absolute z-10 mt-7 flex w-[60px] flex-col overflow-x-hidden rounded-lg border border-shark-200 bg-shark-50 shadow dark:border-shark-900 dark:bg-shark-900"
+        class="absolute z-10 mt-7 flex w-15 flex-col overflow-x-hidden rounded-lg border border-shark-200 bg-shark-50 shadow-sm dark:border-shark-900 dark:bg-shark-900"
       >
         <div
           v-for="locale in availableLocales"

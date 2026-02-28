@@ -1,0 +1,1 @@
+{ "plugins": ["vue"], "rules": { "vue/no-unused-vars": "error" } }
