@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <button class="focus:outline-none" @click="next()">
+  <button class="focus:outline-hidden" @click="next()">
     <div v-show="state === 'light'">
       <AkSun class="h-5 w-5" />
     </div>

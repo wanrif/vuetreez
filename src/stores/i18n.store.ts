@@ -4,8 +4,7 @@ interface State {
   locale: string;
 }
 
-export const useI18nStore = defineStore({
-  id: 'i18n',
+export const useI18nStore = defineStore('i18n', {
   state: (): State => ({
     locale: '',
   }),
@@ -16,7 +15,6 @@ export const useI18nStore = defineStore({
   },
   getters: {},
   persist: {
-    key: 'locale',
-    paths: ['locale'],
+    pick: ['locale'],
   },
 });

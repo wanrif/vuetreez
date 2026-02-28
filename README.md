@@ -1,53 +1,119 @@
 # VueTreez
 
-This is a boilerplate project for creating Vue.js applications with TypeScript. It is designed to provide a strong foundation and streamline the development process for your projects.
+VueTreez is a Vue 3 + TypeScript starter that includes routing, i18n, theme switching, state persistence, and Tailwind CSS v4.
 
 ## Features
 
-- Vue.js and TypeScript integration
-- Scalable and maintainable architecture
-- Tailwind CSS for styling
-- Modern tooling with Vite and ESLint
+- Vue 3 with Composition API and TypeScript
+- Vite 7 development/build pipeline
+- Tailwind CSS v4 with custom design tokens (emerald + shark palette)
+- Route-based layout setup with shared header/nav behavior
+- Responsive navigation (desktop links + mobile drawer)
+- Theme switcher (light, dark, auto) with persisted preference
+- Internationalization with English and Indonesian locales
+- Persisted locale and app state via Pinia + pinia-plugin-persistedstate + zipson
+- Custom 404 page with navigation actions
+- Oxlint-based linting and Prettier formatting
 
-## Technologies Used
+## Tech Stack
 
-- Vite
-- Vue.js
+- Vue 3
 - TypeScript
-- Tailwind CSS
-- Vue I18n
+- Vite
 - Vue Router
-- Vueuse
+- Vue I18n
 - Pinia
-- Zipson
-- Lodash
+- VueUse
+- Tailwind CSS v4
+- Oxlint
+- Prettier
+
+## Routes
+
+- `/` : Landing page
+- `/about` : About page
+- `/:pathMatch(.*)*` : Not Found page
+
+## Project Structure
+
+```text
+src/
+  assets/
+    css/main.css
+    images/
+  components/
+    Navbar.vue
+    Header.vue
+    ThemeSwitcher.vue
+    Language.vue
+    Card.vue
+  i18n/
+    en.json
+    id.json
+    index.ts
+  layouts/
+    MainLayout.vue
+  pages/
+    LandingPage/index.vue
+    About/index.vue
+    NotFound/index.vue
+  router/
+    index.ts
+  stores/
+    i18n.store.ts
+  App.vue
+  main.ts
+```
 
 ## Getting Started
 
-To get started with the project, follow these steps:
+### Prerequisites
 
-Clone the repository:
+- Bun 1.3+
 
-```bash
-  git clone https://github.com/wanrif/vuetreez.git
-```
-
-Navigate to the project directory:
+### Install
 
 ```bash
-  cd vuetreez
+bun install
 ```
 
-Install dependencies:
+### Run Development Server
 
 ```bash
-  yarn
+bun run dev
 ```
 
-Start the development server:
+Default dev URL: `http://localhost:5173`
+
+### Build
 
 ```bash
-  yarn dev
+bun run build
 ```
 
-The application will be served at http://localhost:5173/.
+### Preview Production Build
+
+```bash
+bun run preview
+```
+
+## Quality Checks
+
+### Lint
+
+```bash
+bun run lint
+```
+
+### Format
+
+```bash
+bun run format
+```
+
+## Notes
+
+- Lint rules are configured in `.oxlintrc.json`.
+- Path aliases are configured in `tsconfig.json` and `vite.config.ts`.
+- Theme mode is persisted under `__vuetreez__theme`.
+- Persisted Pinia store keys are prefixed with `__vuetreez__`.
