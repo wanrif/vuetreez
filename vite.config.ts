@@ -3,9 +3,11 @@ import vue from '@vitejs/plugin-vue';
 import { fileURLToPath, URL } from 'url';
 import tailwindcss from "@tailwindcss/vite";
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), tailwindcss()],
+  plugins: [vue(), tailwindcss(), cloudflare()],
   server: {
     port: 5173,
   },

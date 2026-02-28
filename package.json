@@ -9,11 +9,13 @@
   "scripts": {
     "dev": "bunx --bun vite --host",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview",
+    "preview": "bun run build && wrangler dev",
     "lint": "oxlint src",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "deploy": "bun run build && wrangler deploy"
   },
   "dependencies": {
+    "@cloudflare/vite-plugin": "^1.25.6",
     "@kalimahapps/vue-icons": "^1.9.5",
     "@tailwindcss/vite": "^4.2.1",
     "@vueuse/components": "^14.2.1",
@@ -24,6 +26,7 @@
     "vue": "^3.5.29",
     "vue-i18n": "^11.2.8",
     "vue-router": "^5.0.3",
+    "wrangler": "^4.69.0",
     "zipson": "^0.2.12"
   },
   "devDependencies": {
